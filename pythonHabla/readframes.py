@@ -1,9 +1,9 @@
 import wave
 import numpy as np
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 #carcar archivo wav en la variable
-gm = wave.open('good-morningMan.wav', 'r')
+gm = wave.open('good-morning.wav', 'r')
 ga = wave.open('good-afternoon.wav', 'r')
 
 bonk = wave.open('bonk.wav', 'r')
@@ -61,11 +61,11 @@ plt.xlabel('Tiempo (segundos)')
 plt.ylabel('Amplitud')
 
 #Agregar informacion de las ondas
-plt.plot(time_gm, gm, label='Good morning')
-plt.plot(time_ga, ga, label='Good afternoon', alpha=0.75)
+plt.plot(time_gm, ondaconvertida_gm, label='Good afternoon')
+plt.plot(time_ga, ondaconvertida_ga, label='Good afternoon', alpha=0.75)
 
-plt.plot(time_bonk, bonk, label='Bonk', alpha=0.5)
-plt.plot(time_pop, pop, label='Cat Pop', alpha=0.25)
+plt.plot(time_bonk, ondaconvertida_bonk, label='Bonk', alpha=0.5)
+plt.plot(time_pop, ondaconvertida_pop, label='Cat Pop', alpha=0.25)
 
 plt.legend()
 plt.show()
